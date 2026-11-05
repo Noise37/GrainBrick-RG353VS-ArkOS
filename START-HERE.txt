@@ -1,0 +1,164 @@
+GRAINBRICK FOR ANBERNIC RG353VS
+Windows installation guide - v0.2.2
+
+This unofficial installer adds GrainBrick to an existing ArkOS installation.
+You do not need to format your card, reinstall ArkOS, or erase your games.
+No PowerShell or SSH is required for a normal installation.
+
+BEFORE YOU START
+- This guide is for the Anbernic RG353VS running ARM64 ArkOS.
+- Back up your cards, game saves and any existing GrainBrick projects first.
+- Connect the handheld to Wi-Fi and keep power connected during installation.
+- At least 2 GiB must be free on the SYSTEM partition. Free space on the games
+  partition alone is not enough. The installer checks this automatically.
+- Already have GrainBrick installed? This is not an upgrade installer. It stops
+  rather than overwriting an existing GrainBrick launcher or its own installation.
+  Keep your projects and ask for migration/removal help before proceeding.
+- Do not change ArkOS versions just to install this package.
+
+1. CHOOSE THE CORRECT CARD
+
+Shut down the handheld completely before removing either card.
+
+If you use TWO cards:
+  TF1/OS holds ArkOS. Leave that card alone.
+  TF2 holds your games. Insert the TF2 games card into your Windows PC.
+
+If you use ONE card:
+  Remove the card from TF1/OS and insert it into your Windows PC.
+
+In File Explorer, open This PC and find the card's games partition.
+It may be labeled EASYROMS. Open the existing ports folder there.
+If you already use other ports, you should recognize their files in this folder.
+If Windows asks to format a partition, click Cancel. Do not format the card.
+
+2. DOWNLOAD AND EXTRACT THIS INSTALLER
+
+Download grainbrick-rg353vs-ports-v0.2.2.zip from this project's GitHub Release.
+This is the installer ZIP. It is separate from the original GrainBrick application.
+
+In your Windows Downloads folder:
+  1. Right-click grainbrick-rg353vs-ports-v0.2.2.zip.
+  2. Select Extract All.
+  3. Click Extract.
+  4. Open the extracted folder.
+
+You should find these three items:
+  Install GrainBrick.sh             - the installer menu entry
+  grainbrick-rg353vs-arkos           - a folder containing the installer files
+  START-HERE.txt                    - this guide
+
+If another enclosing folder appears first, open it until you see those items.
+
+3. COPY TWO ITEMS INTO THE CARD'S PORTS FOLDER
+
+Copy BOTH of these from the extracted download:
+  Install GrainBrick.sh
+  grainbrick-rg353vs-arkos           (copy the ENTIRE folder)
+
+Put both directly inside the games card's ports folder.
+The .sh file and the folder must sit BESIDE each other.
+
+Their locations should be:
+  Games card > ports > Install GrainBrick.sh
+  Games card > ports > grainbrick-rg353vs-arkos
+
+Do not copy the enclosing grainbrick-rg353vs-ports-v0.2.2 folder into ports.
+Do not put Install GrainBrick.sh inside grainbrick-rg353vs-arkos.
+You do not need to copy START-HERE.txt onto the card.
+If Windows asks to replace existing installer files, stop and check whether you
+already have a previous installation before choosing Replace.
+
+4. DOWNLOAD THE ORIGINAL GRAINBRICK APPLICATION
+
+Open the original creator's release page:
+https://github.com/ETRNLIAM/GrainBrick/releases/tag/v1.0.1-beta.2
+
+Under Assets, download:
+  grainbrick.beta.1.0.1.zip
+
+Choose the APPLICATION ZIP, not GitHub's Source code download.
+If Assets is collapsed, click it to show the downloads.
+If you already have that exact original application ZIP, you can reuse it.
+The installer checks the archive and refuses a different or repacked version.
+
+DO NOT EXTRACT this application ZIP.
+Copy it, still compressed, into:
+  Games card > ports > grainbrick-rg353vs-arkos
+
+Open that folder to check the contents. These should be together:
+  grainbrick.beta.1.0.1.zip          - compressed application ZIP
+  install.sh                       - installer script
+  scripts                          - folder
+  docs                             - folder
+  other included files             - leave them in place
+
+The application ZIP must be BESIDE install.sh, not inside scripts or docs.
+You do not need to download Ubuntu separately; installation handles that.
+
+5. RETURN THE CARD TO YOUR HANDHELD
+
+1. Safely eject the card from Windows.
+2. Return it to the SAME slot it came from:
+   Two-card setup: games card back in TF2, original ArkOS card still in TF1.
+   One-card setup: card back in TF1/OS.
+3. Power on the handheld.
+4. Under Options > WiFi, confirm you are connected to the internet.
+5. Keep power connected during installation.
+
+6. RUN THE INSTALLER
+
+1. Open Ports > Install GrainBrick.
+2. Read the installer screen.
+3. Press a face button to begin.
+4. Wait while it downloads and installs the required files.
+   This can take several minutes. Do not switch off or remove the card.
+5. Wait for Installation complete.
+6. Press a button to return to the menu.
+7. Restart EmulationStation using its menu, or shut down normally and boot again.
+8. Open Ports > GrainBrick.
+
+7. CHECK YOUR INSTALLATION
+
+- Load a sample and start playback. Raise the volume gradually.
+- Check the D-pad, face buttons and shoulder buttons.
+- In the project filename dialog, physical X should SAVE and Y should CANCEL.
+- Save a named project, close GrainBrick, reopen it, and load that project.
+- Fully reboot the handheld and check sound, buttons and project loading again.
+- Check that your existing games still launch normally.
+
+Your games remain in their existing folders. This installer creates a separate
+GrainBrick environment; it does not automatically migrate old GrainBrick projects.
+
+IF INSTALL GRAINBRICK DOES NOT APPEAR
+
+Restart EmulationStation. On the PC, confirm Install GrainBrick.sh is directly
+inside the games partition's ports folder, next to grainbrick-rg353vs-arkos.
+Check that Windows has not added .txt to the filename.
+File Explorer > View > Show > File name extensions reveals complete filenames
+on Windows 11; on Windows 10 use View > File name extensions.
+
+IF INSTALLATION STOPS OR THE SCREEN DOES NOT OPEN
+
+Do not format the card or delete game folders. Do not apply unrelated SSH fixes.
+Shut down normally, insert the games card into your PC and find:
+  Games card > ports > grainbrick-rg353vs-arkos > install.log
+  Games card > ports > grainbrick-rg353vs-arkos > installer-screen.log
+
+Send whichever logs exist, the on-screen message, your handheld model and ArkOS
+version when asking for help. A partial installation is kept for diagnosis;
+automatic resume and upgrades are not supported in this version.
+
+COMPATIBILITY AND CREDITS
+
+Owner-reported testing: RG353VS with ArkOS 2.0 (10162023), v0.2.2 installed on
+an existing games setup. The owner reported everything working after testing.
+Earlier v0.2.0 plus the SDL button fix also worked on ArkOS 2.0 (02092025),
+including all buttons and operation after reboot.
+Other handheld models, dArkOS, USB recording and extended stability are not
+claimed tested. See docs/TESTING.md for the exact scope of evidence.
+
+GrainBrick is by ETRNLIAM and its contributors. This package is an unofficial
+ArkOS compatibility installer, not the synthesizer's proprietary source code.
+Integration and device testing: Anthony Jackson. Packaging is AI-assisted.
+Third-party application and GPU binaries are not included in this ZIP.
