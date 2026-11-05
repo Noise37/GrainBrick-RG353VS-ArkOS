@@ -2,7 +2,7 @@
 
 **Add GrainBrick to your existing ArkOS setup without formatting your cards or removing your games.**
 
-This is an **unofficial ArkOS installer** for GrainBrick, created and tested by Anthony Jackson with AI-assisted packaging. GrainBrick itself is by **ETRNLIAM and its contributors**.
+This is an **unofficial ArkOS installer** for GrainBrick, adapted and tested by Q-Noise for the Anbernic RG353VS. GrainBrick itself is by **ETRNLIAM and its contributors**.
 
 ## Download
 
