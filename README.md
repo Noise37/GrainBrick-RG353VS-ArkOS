@@ -2,7 +2,7 @@
 
 **Add GrainBrick to your existing ArkOS setup without formatting your cards or removing your games.**
 
-This is an **unofficial ArkOS installer** for GrainBrick, adapted and tested by Q-Noise for the Anbernic RG353VS. GrainBrick itself is by **ETRNLIAM and its contributors**.
+This is an **unofficial ArkOS installer** for GrainBrick, adapted and tested by Q-Noise for the Anbernic RG353VS. GrainBrick itself is by **ETRNLIAM**.
 
 ## Download
 
@@ -14,19 +14,17 @@ Use that installer ZIP, rather than GitHub's automatically generated **Source co
 
 - You need an **Anbernic RG353VS running ARM64 ArkOS**, a Windows PC, an SD card reader, and Wi-Fi.
 - Back up your cards and game saves first.
-- Installation needs **at least 2 GiB free on the system partition**. Free space on the games partition alone is not enough. The installer checks this automatically.
+- Installation needs **at least 2 GB free on the system partition**. Free space on the games partition alone is not enough. The installer checks this automatically.
 - Keep power connected during installation.
-- **No PowerShell or SSH is needed** for a normal installation.
+  
 - Already have GrainBrick? This installer is **not an upgrade tool**. It stops rather than overwriting an existing launcher or its own installation. Back up your projects and ask for migration help first.
 
-## 1. Choose the correct SD card
+## 1. Open your games SD card on your computer
 
 **Shut down your handheld completely before removing a card.**
 
-| Your setup | Which card goes into your PC? |
-| --- | --- |
-| Two cards | The **games card from TF2**. Leave the ArkOS card from TF1 alone. |
-| One card | The card from **TF1/OS**. |
+- **If you use two SD cards:** Remove the games card from **TF2**. Leave the ArkOS card in TF1.
+- **If you use one SD card:** Remove that card from **TF1/OS**.
 
 1. Insert the correct card into your Windows PC.
 2. Open **File Explorer → This PC**.
@@ -160,7 +158,6 @@ The exact combined v0.2.2 ZIP has not been separately confirmed on a fully clean
 
 The **integration installer and launcher source** are in `grainbrick-rg353vs-arkos`. GrainBrick's proprietary synthesizer source, application binaries, samples, Ubuntu files and GPU binaries are not included in this release ZIP.
 
-- **GrainBrick:** ETRNLIAM and its contributors.
-- **ArkOS adaptation and device testing:** Anthony Jackson.
-- **Packaging and documentation:** AI-assisted.
+- **GrainBrick:** ETRNLIAM
+- **ArkOS adaptation and device testing:** Q-Noise
 - The included MIT license covers this integration project's code and documentation only. Third-party components retain their own rights and licenses.
