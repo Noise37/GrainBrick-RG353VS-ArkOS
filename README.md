@@ -111,14 +111,6 @@ You can reuse an existing copy of that exact original application ZIP. The insta
 7. Restart EmulationStation using its menu, or shut down normally and boot again.
 8. Open **Ports → GrainBrick**.
 
-## 7. Check everything works
-
-1. Load a sample and start playback. Raise the volume gradually.
-2. Test the D-pad, face buttons and shoulder buttons.
-3. In the project filename dialog, check that **physical X saves** and **Y cancels**.
-4. Save a named project, close GrainBrick, reopen it, and load that project.
-5. Fully reboot and check sound, controls and project loading again.
-6. Check that your existing games still launch normally.
 
 The installer creates a separate GrainBrick environment. It does not automatically migrate projects from an older GrainBrick installation.
 
