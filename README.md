@@ -15,7 +15,7 @@ Use that installer ZIP, rather than GitHub's automatically generated **Source co
 - You need an **Anbernic RG353VS running ARM64 ArkOS**, a Windows PC, an SD card reader, and Wi-Fi.
 - Back up your cards and game saves first.
 - Installation needs **at least 2 GB free on the system partition**. Free space on the games partition alone is not enough. The installer checks this automatically.
-- Keep power connected during installation.
+- The installer creates a separate GrainBrick environment. It does not automatically migrate projects from an older GrainBrick installation.
   
 - Already have GrainBrick? This installer is **not an upgrade tool**. It stops rather than overwriting an existing launcher or its own installation. Back up your projects and ask for migration help first.
 
