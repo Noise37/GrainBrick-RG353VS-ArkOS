@@ -27,7 +27,6 @@ Use that installer ZIP, rather than GitHub's automatically generated **Source co
 - **If you use one SD card:** Remove that card from **TF1/OS**.
 
 1. Insert the correct card into your Windows PC.
-2. Open **File Explorer → This PC**.
 3. Open the card's games partition. It may be named **EASYROMS**.
 4. Open its existing **`ports`** folder. You may recognize files from other installed ports.
 
